@@ -71,10 +71,10 @@
   $("#save").on("click", function (){
     const task = $("#task").val();
     const content = {
-      register : $("#content1").val(),
-      deadline : $("#content2").val(),
-      priority : $("#content3").val(),
-      todo: $("#content4").val(),
+      登録 : $("#content1").val(),
+      期限 : $("#content2").val(),
+      優先度 : $("#content3").val(),
+      タスク: $("#content4").val(),
     };
   
 //2. JSONオブジェクトをJSON文字列に変換してローカルストレージに保存
@@ -83,11 +83,11 @@
 //ローカルストレージから取得してHTMLへ変換
   //function displayTask(){
   //ローカルストレージからデータ取得してオブジェクト変換
-    const savedTask = JSON.parse(localStorage.getItem(task));
+    
   })
-
-  console.log("savedTask")
-
+  const savedTask = JSON.parse(localStorage.getItem(task));
+  
+  //console.log(JSON.parse(localStorage.getItem(task)))
 // 3. データが存在する場合、表示処理を実行
   $("#display").on("click", function () {
     if (savedTask) {
